@@ -1,0 +1,9 @@
+.tile {
+    margin: 5px;
+    position: relative;
+    text-align: center;
+    color: black;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+}
