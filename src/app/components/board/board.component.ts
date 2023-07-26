@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {Coordinate, Rank} from "../../model/coordinate";
 
 @Component({
     selector: 'app-board',
@@ -7,16 +8,13 @@ import {Component} from '@angular/core';
 })
 export class BoardComponent {
 
-
-    getBoard(): string[][] {
-        let board: string[][] = []
-
+    getBoard(): Coordinate[][] {
+        let board: Coordinate[][] = []
 
         for (let j = 97; j <= 104; j++) {
-            let rank: string[] = []
+            let rank: Coordinate[] = []
             for (let i = 8; i >= 1; i--) {
-
-                rank.push(i + String.fromCharCode(j))
+                rank.push(<Coordinate>{rank: i, file: String.fromCharCode(j)})
             }
 
             board.push(rank)

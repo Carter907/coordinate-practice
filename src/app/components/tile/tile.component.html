@@ -1,4 +1,9 @@
-<div class="tile">
-    <p>{{name}}</p>
+<div class="tile" [ngStyle]="{
+'background-color': (coordinate.rank+coordinate.file.charCodeAt(0)+1) % 2 == 0 ? 'white' : 'black'
+
+}">
+    <p>{{coordinate.file + coordinate.rank}}</p>
 
 </div>
+
+

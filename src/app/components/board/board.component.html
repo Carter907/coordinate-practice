@@ -1,9 +1,9 @@
 <div class="board">
-    <p>board:</p>
+
     <div *ngFor="let rank of getBoard()">
         <div *ngFor="let coordinate of rank">
             <div>
-                <app-tile [name]="coordinate"></app-tile>
+                <app-tile [coordinate]="coordinate"></app-tile>
 
             </div>
 
